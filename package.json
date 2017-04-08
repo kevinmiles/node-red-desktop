@@ -1,0 +1,31 @@
+{
+  "name": "node-red-app",
+  "version": "1.0.0",
+  "description": "Node-RED Desktop Application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netsmarttech/node-red-app.git"
+  },
+  "keywords": [
+    "node-red",
+    "electron"
+  ],
+  "author": "Guilherme Francescon <guilherme.francescon@netsmarttech.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/netsmarttech/node-red-app/issues"
+  },
+  "homepage": "https://github.com/netsmarttech/node-red-app#readme",
+  "dependencies": {
+    "electron": "^1.6.2",
+    "node-red": "^0.16.2"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.6.0"
+  }
+}

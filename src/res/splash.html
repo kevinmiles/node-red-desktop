@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background: url("node-red-256.png") no-repeat center center;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+    </style>
+
+    <script>
+        function onReady() {
+            console.log('onload');
+
+            var elmMsg = document.getElementById("footer");
+
+            const {
+                ipcRenderer
+            } = require('electron');
+
+            ipcRenderer.on('splash-status-message', (event, arg) => {
+                console.log(elmMsg, arg)
+                if (elmMsg) elmMsg.innerHTML = arg;
+            });
+        }
+    </script>
+</head>
+
+<body onload="onReady();">
+    <footer id="footer"></footer>
+</body>
+
+</html>
