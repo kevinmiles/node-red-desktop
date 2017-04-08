@@ -8,12 +8,10 @@ function SplashScreen(opts) {
     this.opts = opts || {};
 
     let mainScreen = require('electron').screen.getPrimaryDisplay().bounds;
-    console.log(mainScreen);
     let width = this.opts.width || 640;
     let height = this.opts.height || 480;
     let x = (mainScreen.width / 2) - (width / 2);
     let y = (mainScreen.height / 2) - (height / 2);
-    console.log(width, height, x, y);
 
     this.win = new BrowserWindow({
         width,
@@ -21,8 +19,7 @@ function SplashScreen(opts) {
         x,
         y,
         frame: this.opts.frame || false,
-        title: this.opts.title || 'Node-RED',
-        icon: path.join(__dirname, 'res/favicon.ico'),
+        icon: path.join(__dirname, 'res', process.platform == 'win32' ? 'favicon.ico' : 'favicon.png'),
         center: true,
         show: false,
         backgroundColor: this.opts.backgroundColor

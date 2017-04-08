@@ -1,5 +1,5 @@
 {
-  "name": "node-red-app",
+  "name": "node-red-desktop",
   "version": "1.0.0",
   "description": "Node-RED Desktop Application",
   "main": "src/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/netsmarttech/node-red-app.git"
+    "url": "git+https://github.com/netsmarttech/node-red-desktop.git"
   },
   "keywords": [
     "node-red",
@@ -18,9 +18,9 @@
   "author": "Guilherme Francescon <guilherme.francescon@netsmarttech.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/netsmarttech/node-red-app/issues"
+    "url": "https://github.com/netsmarttech/node-red-desktop/issues"
   },
-  "homepage": "https://github.com/netsmarttech/node-red-app#readme",
+  "homepage": "https://github.com/netsmarttech/node-red-desktop#readme",
   "dependencies": {
     "electron": "^1.6.2",
     "node-red": "^0.16.2"

@@ -10,12 +10,15 @@ function MainWindow(opts) {
 
   this.opts = opts || {};
 
+  let screenSize = require('electron').screen.getPrimaryDisplay().workAreaSize;
+
   // Create the browser window.
   this.win = new BrowserWindow({
-    kiosk: true,
-    title: 'Node-RED',
+    width: screenSize.width,
+    height: screenSize.height,
+    title: 'Node-RED Desktop',
     show: false,
-    icon: path.join(__dirname, 'res/favicon.ico'),
+    icon: path.join(__dirname, 'res', process.platform == 'win32' ? 'favicon.ico' : 'favicon.png'),
     webPreferences: {
       nodeIntegration: false
     }
