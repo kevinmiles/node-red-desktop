@@ -43,6 +43,10 @@ function MainWindow(opts) {
     app.quit(); //TODO handle this with index.js::exitApp()
   });
 
+  if(this.opts.debug) {
+      this.win.webContents.openDevTools();
+  }
+
   // Emitted when the window is closed.
   this.win.on('closed', () => {
     this.win = null;
