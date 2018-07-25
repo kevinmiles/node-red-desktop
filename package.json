@@ -1,6 +1,6 @@
 {
   "name": "node-red-desktop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node-RED Desktop Application",
   "main": "src/index.js",
   "scripts": {
@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/netsmarttech/node-red-desktop#readme",
   "dependencies": {
-    "electron": "1.8.4",
-    "node-red": "0.18.4"
+    "electron": "2.0.5",
+    "node-red": "0.18.7"
   },
   "devDependencies": {
-    "electron-packager": "^12.0.0"
+    "electron-packager": "^12.1.0"
   }
 }
